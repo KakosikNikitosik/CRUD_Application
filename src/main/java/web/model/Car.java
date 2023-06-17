@@ -5,14 +5,7 @@ public class Car {
     private String producer;
     private int year;
 
-    @Override
-    public String toString() {
-        return "Car{" +
-                "model='" + model + '\'' +
-                ", producer='" + producer + '\'' +
-                ", year=" + year +
-                '}';
-    }
+
 
     public Car() {
     }
@@ -45,5 +38,14 @@ public class Car {
 
     public void setYear(int year) {
         this.year = year;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "model='" + model + '\'' +
+                ", producer='" + producer + '\'' +
+                ", year=" + year +
+                '}';
     }
 }
