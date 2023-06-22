@@ -39,20 +39,23 @@ public class UserController {
     }
 
     @GetMapping("/edit/{id}")
-    public String getEditUser(Model model, @PathVariable("id") Long id) {
-        model.addAttribute("user", userService.show(id));
-        return "edit";
+    public String updateUserForm(@PathVariable("id") Long id,Model model) {
+        User user = userService.show(id);
+        model.addAttribute("user", user);
+        return "/edit";
     }
-    @PostMapping("/{id}")
-    public String updateUser( @PathVariable("id") Long id, @ModelAttribute("user") User user) {
-        userService.update(id, user);
+    @PostMapping("/edit")
+    public String updateUser(User user) {
+        userService.update(user);
         return "redirect:/users";
     }
+
 
     @PostMapping("/delete/{id}")
     public String deleteUser(@PathVariable("id") Long id) {
         userService.delete(id);
         return "redirect:/users";
     }
+
 
 }
