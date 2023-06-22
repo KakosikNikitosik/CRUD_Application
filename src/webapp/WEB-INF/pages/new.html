@@ -6,19 +6,19 @@
   <title>Title</title>
 </head>
 <body>
-<div><center>
-<form th:method="POST" th:action="@{/save}" th:object="${user}">
-  <label for="name"> Enter your name: </label>
-  <input type="text" name="firstName" id="name"/>
-  <br/><br/>
-  <label for="last"> Enter LastName: </label>
-  <input type="text" name="lastName" id="last"/>
-  <br/><br/>
-  <label for="email"> Enter email: </label>
-  <input type="text" name="email" id="email"/>
-  <br/><br/>
-  <input type="submit" value="Add user"/>
-</form>
-</center></div>
+  <div><center>
+  <form th:method="POST" th:action="@{/save}" th:object="${user}">
+    <label for="name"> Enter your name: </label>
+    <input type="text" name="firstName" id="name"/>
+    <br/><br/>
+    <label for="last"> Enter LastName: </label>
+    <input type="text" name="lastName" id="last"/>
+    <br/><br/>
+    <label for="email"> Enter email: </label>
+    <input type="text" name="email" id="email"/>
+    <br/><br/>
+    <input type="submit" value="Add user"/>
+  </form>
+  </center></div>
 </body>
 </html>
